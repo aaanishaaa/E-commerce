@@ -10,7 +10,11 @@ const productSchema=new mongoose.Schema({
     stock:{
         type: Number,
         default: 1,     
+        min:0,
     },   
+    tags:{
+        type:[String],
+    },
 });
 const productModel=mongoose.model("product",productSchema);
 
